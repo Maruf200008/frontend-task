@@ -6,7 +6,7 @@ import img3 from "../images/newGame/Img3.png";
 import img4 from "../images/newGame/Img4.png";
 import img5 from "../images/newGame/Img5.png";
 import img6 from "../images/newGame/Img6.png";
-import NewGamingModal from "./newGamingModal";
+import NewGamingModal from "./NewGamingModal";
 export default function NewGamingSection() {
   const imgData = [
     {
@@ -64,28 +64,30 @@ export default function NewGamingSection() {
           unique to their gaming journey.`}
             </p>
           </div>
-          <div className="w-[600px] relative">
+          <div>
             <NewGamingModal />
-            <div className=" grid grid-cols-2 gap-5">
-              {imgData.map((img) => (
-                <div
-                  key={img?.id}
-                  className=" rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer"
-                >
+            <div className="w-[600px] relative">
+              <div className=" grid grid-cols-2 gap-5">
+                {imgData.map((img) => (
                   <div
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                    className=" bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5  "
+                    key={img?.id}
+                    className=" rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer"
                   >
-                    <div className=" rounded-full overflow-hidden">
-                      <Image src={img?.img} alt="img1" width={60} />
+                    <div
+                      onMouseOver={handleMouseOver}
+                      onMouseOut={handleMouseOut}
+                      className=" bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5  "
+                    >
+                      <div className=" rounded-full overflow-hidden">
+                        <Image src={img?.img} alt="img1" width={60} />
+                      </div>
+                      <p className=" font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text  ">
+                        {img?.title}
+                      </p>
                     </div>
-                    <p className=" font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text  ">
-                      {img?.title}
-                    </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

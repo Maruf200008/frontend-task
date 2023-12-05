@@ -4,10 +4,11 @@
 
 body {
   background-color: #000000;
+
   background-image: url("./images/xBorg - Static0002 1.png"),
     url("./images/xBorg - Static0003 1.png");
   background-repeat: no-repeat;
-  background-position: left top, right 150px top;
+  background-position: left top, right 30px top;
 }
 .network-container {
   background-image: url("./images/networkBg/Spheres.png"),
