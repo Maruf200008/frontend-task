@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <NetworkSection />
-      <NewGamingSection />
+      <div className="new-gamin-container pb-20 my-20">
+        <NetworkSection />
+        <NewGamingSection />
+      </div>
     </div>
   );
 }
