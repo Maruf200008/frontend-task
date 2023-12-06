@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import img1 from "../images/newGame/Img1.png";
 import img2 from "../images/newGame/Img2.png";
 import img3 from "../images/newGame/Img3.png";
@@ -41,13 +42,20 @@ export default function NewGamingSection() {
     },
   ];
 
-  const handleMouseOver = () => {
-    console.log("Fouced");
+  const [isShown, setIsShown] = useState(false);
+  const [modalData, setModalData] = useState({});
+
+  const handleMouseOver = (data) => {
+    setIsShown(true);
+    setModalData(data);
+    console.count();
   };
 
   const handleMouseOut = () => {
-    console.log("Fouced Out");
+    setIsShown(false);
   };
+
+  console.log(isShown);
 
   return (
     <div className=" my-[100px]">
@@ -64,19 +72,21 @@ export default function NewGamingSection() {
           unique to their gaming journey.`}
             </p>
           </div>
-          <div>
-            <NewGamingModal />
-            <div className="w-[600px] relative">
-              <div className=" grid grid-cols-2 gap-5">
+          {isShown && <NewGamingModal modalData={modalData} />}
+          <div className="">
+            <div className="w-[600px]   ">
+              <div className=" grid grid-cols-2 gap-5   ">
                 {imgData.map((img) => (
                   <div
                     key={img?.id}
-                    className=" rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer"
+                    className="  rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer"
                   >
                     <div
-                      onMouseOver={handleMouseOver}
-                      onMouseOut={handleMouseOut}
-                      className=" bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5  "
+                      onMouseEnter={() =>
+                        handleMouseOver({ img: img?.img, title: img?.title })
+                      }
+                      onMouseLeave={handleMouseOut}
+                      className=" bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5"
                     >
                       <div className=" rounded-full overflow-hidden">
                         <Image src={img?.img} alt="img1" width={60} />
