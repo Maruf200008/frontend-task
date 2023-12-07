@@ -48,17 +48,16 @@ export default function NewGamingSection() {
   const handleMouseOver = (data) => {
     setIsShown(true);
     setModalData(data);
-    console.count();
   };
 
   const handleMouseOut = () => {
-    setIsShown(false);
+    setIsShown(!isShown);
   };
 
   console.log(isShown);
 
   return (
-    <div className=" my-[100px]">
+    <div className=" my-[100px] ">
       <div className="max-w-screen-xl my-20 text-white flex flex-wrap items-center justify-between mx-auto p-4">
         <div className=" grid grid-cols-2 w-full">
           <div className="space-y-5">
@@ -72,31 +71,29 @@ export default function NewGamingSection() {
           unique to their gaming journey.`}
             </p>
           </div>
-          {isShown && <NewGamingModal modalData={modalData} />}
-          <div className="">
-            <div className="w-[600px]   ">
-              <div className=" grid grid-cols-2 gap-5   ">
+
+          <div className=" ">
+            <div className="w-[600px] relative">
+              <div className="grid grid-cols-2 gap-5">
                 {imgData.map((img) => (
                   <div
                     key={img?.id}
-                    className="  rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer"
+                    className="rounded-full p-[1px] bg-gradient-to-r from-neutral-900 to-neutral-500 cursor-pointer relative"
                   >
-                    <div
-                      onMouseEnter={() =>
-                        handleMouseOver({ img: img?.img, title: img?.title })
-                      }
-                      onMouseLeave={handleMouseOut}
-                      className=" bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5"
-                    >
-                      <div className=" rounded-full overflow-hidden">
+                    <div className="group bg-[#080808] rounded-full pl-3 pr-6 py-2 flex items-center gap-5">
+                      <div className="rounded-full overflow-hidden">
                         <Image src={img?.img} alt="img1" width={60} />
+                        <div className="opacity-0  z-40 group-hover:opacity-100 top-0 ease-in duration-300 absolute left-0">
+                          <NewGamingModal modalData={img} />
+                        </div>
                       </div>
-                      <p className=" font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text  ">
+                      <p className="font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text">
                         {img?.title}
                       </p>
                     </div>
                   </div>
                 ))}
+                {/* Move NewGamingModal outside the map function */}
               </div>
             </div>
           </div>
