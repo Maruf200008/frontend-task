@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import img1 from "../images/newGame/Img1.png";
 import img2 from "../images/newGame/Img2.png";
 import img3 from "../images/newGame/Img3.png";
@@ -42,29 +41,15 @@ export default function NewGamingSection() {
     },
   ];
 
-  const [isShown, setIsShown] = useState(false);
-  const [modalData, setModalData] = useState({});
-
-  const handleMouseOver = (data) => {
-    setIsShown(true);
-    setModalData(data);
-  };
-
-  const handleMouseOut = () => {
-    setIsShown(!isShown);
-  };
-
-  console.log(isShown);
-
   return (
     <div className=" my-[100px] ">
       <div className="max-w-screen-xl my-20 text-white flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className=" grid grid-cols-2 w-full">
+        <div className=" md:grid grid-cols-2 w-full space-y-10">
           <div className="space-y-5">
-            <h1 className=" font-bold uppercase text-[40px] w-[350px] leading-[45px]">
+            <h1 className=" font-bold uppercase text-[40px] md:w-[350px] leading-[45px]">
               The New Gaming Web
             </h1>
-            <p className=" w-[430px] font-light leading-7 text-neutral-300">
+            <p className=" md:w-[430px] font-light leading-7 text-neutral-300">
               {`At the core of the XBorg Data Graph Protocol lies a dynamic and
           interconnected network of gaming profiles. Each player's profile
           is represented as a unique ERC-721 NFT, complete with metadata
@@ -73,8 +58,8 @@ export default function NewGamingSection() {
           </div>
 
           <div className=" ">
-            <div className="w-[600px] relative">
-              <div className="grid grid-cols-2 gap-5">
+            <div className=" w-full   md:w-[600px] relative">
+              <div className="md:grid grid-cols-2 gap-5 space-y-6 md:space-y-0">
                 {imgData.map((img) => (
                   <div
                     key={img?.id}
@@ -93,7 +78,6 @@ export default function NewGamingSection() {
                     </div>
                   </div>
                 ))}
-                {/* Move NewGamingModal outside the map function */}
               </div>
             </div>
           </div>

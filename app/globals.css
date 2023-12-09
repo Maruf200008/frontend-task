@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-position: left top, right 30px top;
 }
+
 .network-container {
   background-image: url("./images/networkBg/Spheres.png"),
     url("./images/networkBg/SpheresStill0065.png");
@@ -28,4 +29,12 @@ body {
   background-image: radial-gradient(circle, #eb3a4a, #2b2b2b);
   background-clip: text;
   color: transparent;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background-image: url("./images/xBorg - Static0003 1.png");
+    background-repeat: no-repeat;
+    background-position: top 250px;
+  }
 }
