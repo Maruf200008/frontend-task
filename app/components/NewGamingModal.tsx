@@ -18,17 +18,17 @@ export default function NewGamingModal({ modalData }) {
 }`;
 
   return (
-    <div className="backdrop-blur-md  z-50 w-[450px]   bg-[#090909]/70  border border-[#343434]  rounded-2xl p-5">
+    <div className="backdrop-blur-md  z-50 lg:w-[450px] xl:w-full 2xl:w-[400px]      bg-[#090909]/70  border border-[#343434]  rounded-2xl p-5">
       <div>
-        <div className=" w-[300px] space-y-5 ">
-          <div className=" bg-primary/10 border border-primary rounded-full pl-3 pr-6 py-2 flex items-center gap-5  ">
+        <div className=" w-full md:w-[300px] lg:w-[250px] 2xl:w-[300px]  space-y-5 ">
+          <div className=" bg-primary/10 border border-primary rounded-full pl-3 pr-6 py-2 flex items-center gap-3  ">
             <div className=" rounded-full overflow-hidden">
               <Image src={modalData?.img} alt="img1" width={60} />
             </div>
             <p className=" font-semibold text-primary">{modalData?.title}</p>
           </div>
 
-          <div className=" w-[400px] text-sm ">
+          <div className=" lg:w-[400px] xl:w-full 2xl:w-[350px]  text-sm ">
             <SyntaxHighlighter
               language="javascript"
               className={"syntax-highlighter"}

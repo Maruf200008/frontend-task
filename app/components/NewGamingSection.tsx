@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import img1 from "../images/newGame/Img1.png";
 import img2 from "../images/newGame/Img2.png";
 import img3 from "../images/newGame/Img3.png";
@@ -42,29 +41,15 @@ export default function NewGamingSection() {
     },
   ];
 
-  const [isShown, setIsShown] = useState(false);
-  const [modalData, setModalData] = useState({});
-
-  const handleMouseOver = (data) => {
-    setIsShown(true);
-    setModalData(data);
-  };
-
-  const handleMouseOut = () => {
-    setIsShown(!isShown);
-  };
-
-  console.log(isShown);
-
   return (
     <div className=" my-[100px] ">
-      <div className="max-w-screen-xl my-20 text-white flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className=" grid grid-cols-2 w-full">
-          <div className="space-y-5">
-            <h1 className=" font-bold uppercase text-[40px] w-[350px] leading-[45px]">
+      <div className="max-w-screen-xl my-20 text-white flex flex-wrap items-center justify-between mx-auto  gap-5">
+        <div className=" xl:grid grid-cols-2 w-full md:space-y-10 xl:space-y-0 ">
+          <div className="space-y-10 pl-4 ">
+            <h1 className=" font-bold uppercase text-[40px] md:text-[55px] lg:text-[70px] sm:text-center lg:w-full leading-[45px] xl:text-left xl:leading-[80px] xl:w-[80%]">
               The New Gaming Web
             </h1>
-            <p className=" w-[430px] font-light leading-7 text-neutral-300">
+            <p className=" xl:w-[430px] lg:w-[60%] mx-auto sm:px-10 text-sm sm:text-base sm:text-center font-light md:leading-7 text-neutral-300 xl:text-left xl:mx-0  xl:px-0">
               {`At the core of the XBorg Data Graph Protocol lies a dynamic and
           interconnected network of gaming profiles. Each player's profile
           is represented as a unique ERC-721 NFT, complete with metadata
@@ -72,9 +57,9 @@ export default function NewGamingSection() {
             </p>
           </div>
 
-          <div className=" ">
-            <div className="w-[600px] relative">
-              <div className="grid grid-cols-2 gap-5">
+          <div className=" p-0 ">
+            <div className="lg:w-[80%] xl:w-full sm:w-full relative mt-16 md:mt-0 lg:mx-auto lg:mt-20 xl:mt-0 px-3 xl:px-0">
+              <div className="sm:grid grid-cols-2 gap-5  space-y-10 sm:space-y-0">
                 {imgData.map((img) => (
                   <div
                     key={img?.id}
@@ -87,13 +72,12 @@ export default function NewGamingSection() {
                           <NewGamingModal modalData={img} />
                         </div>
                       </div>
-                      <p className="font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text">
+                      <p className="font-semibold text-transparent bg-gradient-to-r from-neutral-700 to-neutral-200 bg-clip-text lg:text-[20px]">
                         {img?.title}
                       </p>
                     </div>
                   </div>
                 ))}
-                {/* Move NewGamingModal outside the map function */}
               </div>
             </div>
           </div>

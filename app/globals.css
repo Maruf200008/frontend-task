@@ -29,3 +29,56 @@ body {
   background-clip: text;
   color: transparent;
 }
+@media only screen and (max-width: 640px) {
+  .new-gamin-container {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right top 150px;
+    background-size: 600px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    background-image: url("./images/xBorg - Static0003 1.png");
+    background-repeat: no-repeat;
+    background-position: left -150px top 750px;
+  }
+  .new-gamin-container {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right -50px top -50px;
+    background-size: 600px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("./images/xBorg - Static0002 1.png"),
+      url("./images/xBorg - Static0003 1.png");
+    background-repeat: no-repeat;
+    background-position: left -150px top, right -250px top 250px;
+  }
+  .new-gamin-container {
+    background-image: url("./images/newGame/newGameBg.png");
+    background-position: right -50px top -80px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  body {
+    background-image: url("./images/xBorg - Static0002 1.png"),
+      url("./images/xBorg - Static0003 1.png");
+    background-repeat: no-repeat;
+    background-position: left top, right -150px top 200px;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  body {
+    background-image: url("./images/xBorg - Static0002 1.png"),
+      url("./images/xBorg - Static0003 1.png");
+    background-repeat: no-repeat;
+    background-position: left top, right 10px top 100px;
+  }
+}
