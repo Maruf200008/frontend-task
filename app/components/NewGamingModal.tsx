@@ -1,10 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface ModalData {
-  id: number;
-  img: string;
+  img: string | StaticImageData; // Modify this line to accept both string and StaticImageData
   title: string;
 }
 

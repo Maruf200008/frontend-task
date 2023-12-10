@@ -1,8 +1,6 @@
 ## Project Name : Frontent Test
 
-![Project Demo]('../fronten-test/app/images/04.jpg')
-
-##### About This Project :
+#### About This Project :
 
 Welcome to our frontend web application project! This project aims to provide a modern and user-friendly web experience using cutting-edge technologies. Below, we outline the key aspects and features of this frontend application.
 Project Overview:
@@ -19,7 +17,7 @@ Project Overview:
 
 ### How to Run the Project:
 
-    👉 Clone the repository: git clone <repository-url>
+    👉 Clone the repository: git clone https://github.com/Maruf200008/frontend-task.git
     👉 Install dependencies: npm install
     👉 Run the development server: npm run dev
     👉 Open the application in your browser at http://localhost:3000
