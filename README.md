@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Name : Frontent Test
 
-## Getting Started
+![Project Demo]('../fronten-test/app/images/04.jpg')
 
-First, run the development server:
+##### About This Project :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to our frontend web application project! This project aims to provide a modern and user-friendly web experience using cutting-edge technologies. Below, we outline the key aspects and features of this frontend application.
+Project Overview:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Technology Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👉 Next Js : A JavaScript library for building user interfaces, providing a robust and efficient way to create interactive components.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+👉 TypeScript : A superset of JavaScript that brings static typing to the language, enhancing code quality and developer productivity.
 
-## Learn More
+👉 Responsiveness : The application is designed to be responsive, ensuring an optimal viewing experience across various devices and screen sizes. Utilizing responsive design principles, we aim to deliver a consistent and user-friendly interface.
 
-To learn more about Next.js, take a look at the following resources:
+👉 Responsiveness : The application is designed to be responsive, ensuring an optimal viewing experience across various devices and screen sizes. Utilizing responsive design principles, we aim to deliver a consistent and user-friendly interface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### How to Run the Project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    👉 Clone the repository: git clone <repository-url>
+    👉 Install dependencies: npm install
+    👉 Run the development server: npm run dev
+    👉 Open the application in your browser at http://localhost:3000
 
-## Deploy on Vercel
+Thank you for being a part of our frontend web application project! We hope you enjoy using the application as much as we enjoyed building it. If you have any questions or concerns, don't hesitate to reach out to our team.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Happy coding!

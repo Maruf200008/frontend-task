@@ -100,7 +100,7 @@ export default function HeroSection() {
       <div className=" flex items-center justify-center w-full mt-16">
         <div className=" flex items-center flex-col">
           <p className=" scroll-style text-lg lg:text-xl ">Scroll down</p>
-          <div>
+          <div className="animate-bounce">
             <Image src={downArrow} alt="downArrow" width={50} />
           </div>
         </div>

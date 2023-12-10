@@ -2,7 +2,18 @@ import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function NewGamingModal({ modalData }) {
+interface ModalData {
+  id: number;
+  img: string;
+  title: string;
+}
+
+export default function NewGamingModal({
+  modalData,
+}: {
+  modalData: ModalData;
+}) {
+  const { img, title } = modalData;
   const codeString = `player_metadata = {
     "player _name": "JohnDoe123",
     "gaming_platform": "PC",
@@ -23,9 +34,9 @@ export default function NewGamingModal({ modalData }) {
         <div className=" w-full md:w-[300px] lg:w-[250px] 2xl:w-[300px]  space-y-5 ">
           <div className=" bg-primary/10 border border-primary rounded-full pl-3 pr-6 py-2 flex items-center gap-3  ">
             <div className=" rounded-full overflow-hidden">
-              <Image src={modalData?.img} alt="img1" width={60} />
+              <Image src={img} alt="img1" width={60} />
             </div>
-            <p className=" font-semibold text-primary">{modalData?.title}</p>
+            <p className=" font-semibold text-primary">{title}</p>
           </div>
 
           <div className=" lg:w-[400px] xl:w-full 2xl:w-[350px]  text-sm ">
