@@ -42,10 +42,11 @@ export default function HeroSection() {
             gaming, where players and fans experience ownership, and governance
             and are rewarded for their contributions.
           </p>
-          <div>
-            <button className=" sm:mx-auto lg:mx-0 flex items-center justify-center btn-style tracking-wide bg-primary px-5 sm:px-8 py-3 rounded-md">
+          <div className=" relative">
+            <button className=" sm:mx-auto lg:mx-0 flex items-center justify-center btn-style tracking-wide bg-primary px-5 sm:px-8 py-3 rounded-md hover:bg-transparent hover:border hover:border-primary ease-in duration-300 border border-primary">
               Join Discord
             </button>
+            <div className=" a"></div>
           </div>
         </div>
         <div className=" mt-[-80px] flex items-center justify-center relative">

@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-position: left top, right 30px top;
 }
+
 .network-container {
   background-image: url("./images/networkBg/Spheres.png"),
     url("./images/networkBg/SpheresStill0065.png");
